@@ -1,0 +1,43 @@
+/* DESKTOP */
+@media (min-width:1024px){
+    /* GRID INDEX */
+    .grid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header, footer, ul{display:flex;}
+    main{
+        display:grid;
+        grid-template-areas:
+        "pepe pepe pepe"
+        "titulo titulo titulo"
+        "pIzq imgTxt pDer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3,auto);
+    }
+    .imgPrincipal{grid-area: pepe;}
+    .titulo{grid-area:titulo;}
+    .parrafoIzq{grid-area: pIzq;}
+    .imgTexto{grid-area: imgTxt;}
+    .parrafoDer{grid-area: pDer;}
+    .just-content-spa-betw{justify-content: space-between;}
+    .align-items-center{align-items: center;}
+    a{color:black;font-size:28px;padding:5px;margin:10px;}
+    p{font-size:30px;}
+    /* GRID MAIN PRODUCTOS */
+    .gridMainProductos{
+        display:grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo"
+        "prodA prodB prodC prodD";
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 10px;
+    }
+    .tituloProdu{grid-area: titulo;}
+    .prodA{grid-area:prodA;} 
+    .prodB{grid-area:prodB;}
+    .prodC{grid-area:prodC;}
+    .prodD{grid-area:prodD;}
+}

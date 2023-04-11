@@ -1,0 +1,8 @@
+.img-fluid{width:100%;height: auto;}
+.bg-principal{background-color:cadetblue;}
+.p20{padding:20px;}
+.m20{margin:20px;}
+.mb20{margin-bottom:20px;}
+.txt-center{text-align:center;}
+.prod{background-color: $colorSecundario; border: 1px solid $colorPrincipal; border-radius:20px;padding:10px;}
+.gridMainProductos div{display: flex;flex-direction: column;align-items: center;}
