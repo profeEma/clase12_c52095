@@ -37,12 +37,30 @@
 }
 
 /* GENERAL */
-ul {
+header {
+  background-color: #aacc99;
+}
+header .nav {
+  padding: 10px;
+}
+header .nav .ul {
+  display: flex;
+}
+header .nav .ul li {
   list-style-type: none;
 }
-
-a {
+header .nav .ul li a {
   text-decoration: none;
+  font-size: 1.7rem;
+  font-family: "tahoma";
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 1px;
+  padding-right: 0;
+}
+header .nav .ul li a:hover {
+  color: red;
 }
 
 /* MOBILE */
@@ -147,6 +165,10 @@ a {
   body {
     background-color: yellowgreen;
   }
+}
+div {
+  width: 102%;
+  height: 102px;
 }
 
 /*# sourceMappingURL=style.css.map */

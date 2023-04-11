@@ -1,6 +1,36 @@
 /* GENERAL */
-ul{list-style-type: none;}
-a{text-decoration: none;}
+// ul{list-style-type: none;}
+// a{text-decoration: none;}
 
+//NESTING O ANIDAMIENTO 
+header{
+    background-color:$colorTerciario;
+    .nav{
+        padding:10px;
+        .ul{
+            display:flex;
+            li{
+                list-style-type: none;
+                a{
+                    text-decoration:none;
+                    font:{
+                        size:$pDesktop;
+                        family:'tahoma';
+                        weight: bold;
+                    }
+                    padding:{
+                        top:10px;
+                        bottom:5px;
+                        left:1px;
+                        right:0;
+                    }
+                    &:hover{
+                        color:red;
+                    } // &:hover === a:hover
+                }
+            }
+        }
+    }
+}
 
 
