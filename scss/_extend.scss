@@ -1,0 +1,36 @@
+// EXTEND
+// CLASE BASE CREADA -> .boton
+.boton{
+    width:200px;
+    height: 50px;
+    text-align: center;
+    background-color: $blanco;
+    color:$negro;
+    border:1px solid $negro;
+    border-radius: 20px;
+    padding:10px;
+    margin:10px;
+}
+// BOTON EXITO, ERROR, ADVERTECIA, PRIMARIO, SECUNDARIO, TERCIARIO
+
+@each $contexto in exito, error, advertencia {
+    .boton-#{$contexto}{
+        @extend .boton;
+    }
+}
+.boton-exito{
+    background-color:green;
+    color:$blanco;
+    border:1px solid limegreen;
+}
+.boton-error{
+    background-color:red;
+    color:black;
+    border: 1px solid lightsalmon;
+}
+.boton-primario{
+    @extend .boton;
+    background-color:aqua;
+    color:blue;
+    border:1px solid blueviolet;
+}

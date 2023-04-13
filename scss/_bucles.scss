@@ -1,0 +1,51 @@
+// BUCLES
+// #{$nombreVariable} -> interpolación
+// qué significa una interpolación? que el valor que tomo la variable va a pasarse al momento de interpolarse
+$blue:#aacc99;
+@for $i from 1 through 5{
+    .margin-#{$i}{
+        margin:10px * $i;
+    }
+}
+
+@for $padding from 1 through 5{
+    .padding-bottom-#{$padding}{
+        padding-bottom:10px * $padding;
+    }
+}
+
+// EACH
+
+@each $color in white, $blue, orange{
+    .text-#{$color}{
+        color:#{$color};
+    }
+}
+
+// MAPA
+
+$dispositivos:(
+    desktop:3rem,
+    mobile:1.5rem,
+    tablet:2rem
+);
+
+@each $dispositivo, $tamanioFuente in $dispositivos{
+    .p-#{$dispositivo}{
+        font-size:$tamanioFuente;
+    }
+}
+
+$estilosTipograficos:(
+    fSize:4rem,
+    fColor:blue,
+    text-align:center,
+    display:flex,
+    fFamily:'tahoma'
+);
+
+h1{
+    font-size:map-get($estilosTipograficos,fSize);
+    color:map-get($estilosTipograficos,fColor);
+    font-family:map-get($estilosTipograficos,fFamily);
+}

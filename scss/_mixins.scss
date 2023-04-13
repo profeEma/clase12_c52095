@@ -1,0 +1,32 @@
+// MIXIN SIN PARAMETROS
+// declaración y definicion
+@mixin flex-row-center{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@mixin flex-column-center{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+ul,footer{
+    @include flex-row-center;
+}
+
+// MIXIN CON PARAMTRO
+// DECLARO Y DEFINO
+@mixin grids($cantidadColumnas,$ancho,$cantidadFilas,$alto){
+    display: grid;
+    grid-template-columns: repeat($cantidadColumnas,$ancho);
+    grid-template-rows: repeat($cantidadFilas,$alto);
+}
+
+.gridMain{
+    @include grids(2,50%,4,auto);
+}

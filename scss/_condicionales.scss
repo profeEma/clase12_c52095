@@ -1,0 +1,12 @@
+// declarar una variable que me va a servir para ver si se cumple cierta condición
+$vista:monitorgigante;
+
+@body{
+    @if $vista == desktop{
+        background-color:blue;
+    }@else if $vista == tablet{
+        background-color:green;
+    }@else{
+        background-color:yellow;
+    }
+}
